@@ -21,7 +21,7 @@ external = []
 title = "\t\tWEB SCRAPER\n"
 
 # Creates a variable to define the folder name + the path to it
-folder_name = re.sub(r'https://', "", dmn)
+folder_name = re.sub(r'http://', "", dmn)
 scrape_path = "scraped" + os.sep + folder_name + "-" + str(int(time.time()))
 
 if not os.path.exists(scrape_path):

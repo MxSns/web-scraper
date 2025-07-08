@@ -47,6 +47,12 @@ pip install -r requirements.txt
 
 Run the script via the command line using the main file (scraper.py), use the -d argument to specify the domain to craw.
 
-python3 scraper.py -d <domain>
+python3 scraper.py -d http://example.com
+
+## Output structure
+
+- HTML files : Html content is saved in a folder named scraped/domain-timestamp , with subdirectories mirroring the URM structure.
+
+- Console output : Lists ass crawled URLs and external links if any.
 
 
