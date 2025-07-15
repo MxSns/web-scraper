@@ -99,3 +99,5 @@ if not external:
     console.print(f"\nNo external links were found in {dmn}", style="red")
 else:
     print("\nExternal URLs:\n" + "\n".join(external))
+
+print(f"\nAll crawled URLs html files saved in {scrape_path}")

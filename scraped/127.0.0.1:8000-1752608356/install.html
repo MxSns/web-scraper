@@ -1,0 +1,161 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+  <title>Sample ECTEG Site</title>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+
+
+<body>
+  <div id="main">		
+
+<!-- HEADING -->	
+    <header>
+	  <div id="strapline">
+	    <div id="welcome_slogan">
+	      <h1>Welcome To The Sample ECTEG Site!</h1>
+	    </div><!--close welcome_slogan-->
+      </div><!--close strapline-->	  
+	  
+
+<!-- LINKS MENU -->	
+	  <nav>
+	    <div id="menubar">
+          <ul id="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="install.html">Website Installation</a></li>
+            <li><a href="requests.html">Python &amp; Requests</a></li>
+            <li><a href="suspect.html">Suspect Page</a></li>
+          </ul>
+        </div><!--close menubar-->	
+      </nav>
+    </header>
+
+
+
+<!-- SLIDESHOW IMAGES -->	
+   
+    <div id="slideshow_container">  
+	  <div class="slideshow">
+	    <ul class="slideshow">
+          <li class="show"><img width="940" height="250" src="images/ecteg.png" alt="&quot;European Cybercrime Training and Education Group&quot;" /></li>
+          <li><img width="940" height="290" src="images/python.jpg" alt="&quot;Python for Investigators&quot;" /></li>
+        </ul> 
+	  </div><!--close slideshow-->  	
+	</div><!--close slideshow_container--> 
+	
+	
+	
+<!-- MAIN CONTENT -->	
+	
+<div id="site_content">		
+		  
+		  
+<!-- SIDEBAR CONTENT -->	
+	  <div class="sidebar_container">       
+		   		
+		<div class="sidebar">
+          <div class="sidebar_item">
+            <h2><b>Latest Updates</b></h2>
+            <h3>July 2015</h3>
+            <p>Invites sent out to potential ECTEG participants from accross European Union Member states and candidate countries.</p>         
+		  </div><!--close sidebar_item--> 
+        </div><!--close sidebar-->
+		
+		<div class="sidebar">
+          <div class="sidebar_item">
+            <h3>August 2015</h3>
+            <p>Developers frantically preparing pre-read material for chosen participants.</p>         
+		  </div><!--close sidebar_item--> 
+        </div><!--close sidebar-->
+        
+        <div class="sidebar">
+          <div class="sidebar_item">
+            <h3>October 2015</h3>
+            <p>Pilot participants have arrived on the courses. The latest batch of ECTEG trained LE Officers are about to be released back into the wild!</p>         
+		  </div><!--close sidebar_item--> 
+        </div><!--close sidebar-->  		  		
+        
+        <div class="sidebar">
+          <div class="sidebar_item">
+            <h2><b>Contact</b></h2>
+            <p>Phone: +353-1-123-4567</p>
+            <p>Email: <a href="mailto:noreply@ecteg.eu">noreply@ecteg.eu</a></p>
+          </div><!--close sidebar_item--> 
+        </div><!--close sidebar-->
+       </div><!--close sidebar_container-->	
+
+
+
+<!-- MAIN BODY CONTENT -->	
+	<div id="content">
+		<div class="content_item">
+			<h2>Hosting This Site<img src="images/apache.png" alt="Apache" style="float:right;width:200px;"></h2>
+			<p>This page contains instructions for installing the <b><i>Apache 2 Web Server</i></b> on various platforms and moving this site to the appropriate folder so that it can be viewed at the localhost address.</p>
+			<p>Before we start, please make sure you have a copy of the website. It is presumed that you do, since you are reading this! From this point onwards, the files for this site will be referred to as <b><i>website.zip</i></b>.</p>
+			<p>The instructions below will help you install Apache on Linux, OS X and Windows 7 platforms (other Windows versions should be similar). </p>
+			
+			<br><br><br><br><br><br>
+			<h2>Linux Installation<img src="images/linux.png" alt="Linx" style="float:right;width:100px;"></h2>
+			<p>Open a terminal and run the following to update your repository:</p>
+			<p><code>sudo apt-get update</code></p>
+			<p>Then run the following to install Apache2:</p>
+			<p><code>sudo apt-get install apache2</code></p>
+			<br><p>The following instructions presume you have the website stored in your Downloads folder.</p>
+			<p>The document root for Apache is /var/www/. While in the terminal copy the website.zip file to this location and extract the contents:</p>
+			<p><code>sudo mv ~/Downloads/website.zip /var/www/</code></p>
+			<p><code>sudo unzip /var/www/website.zip</code></p>
+			<p>To check the installation, open your browser window and go to <a href="http://localhost/site1/index.html">http://localhost/site1/index.html</a>.</p>
+		
+			<br><br><br><br>
+			<h2>OS X Installation<img src="images/apple.jpg" alt="Apple" style="float:right;width:100px;"></h2>
+			<p>Apache 2 is installed by default on Mac OS-X. To start the apache server, open a terminal and type the command:</p>
+			<p><code>sudo apachectl start</code></p>
+			<br><p>The following instructions presume you have the website stored in your Downloads folder.</p>
+			<p>The document root for Apache is Library/WebServer/Documents. While in the terminal copy the website.zip file to this location and extract the contents:</p>
+			<p><code>sudo mv ~/Downloads/website.zip /Library/WebServer/Documents</code></p>
+			<p><code>sudo unzip /Library/WebServer/Documents/website.zip</code></p>
+			<p>To check the installation, open your browser window and go to <a href="http://localhost/site1/index.html">http://localhost/site1/index.html</a>.</p>
+			
+			<br><br><br><br>
+			<h2>Windows Installation<img src="images/windows.png" alt="Windows" style="float:right;width:100px;"></h2>
+			<p>Visit the <a href=http://www.microsoft.com/en-us/download/details.aspx?id=48145  target="_blank">Microsoft Download Centre</a> to download the latest C++ Redistributable for Visual Studio 2015. </p>
+			<p>Make sure to select the correct version (32 or 64-bit) for your system.</p>
+			<p>Run the executable file and continue to the next step.</p>
+			<p>Visit the <a href="http://www.apachelounge.com/download/"  target="_blank">Apache Lounge</a> and choose a suitable version of Apache for your Operating System (32 or 64-bit).</p>
+			<p>Locate the downloaded folder and ...</p>
+			<p><b>Very Important: </b>Extract the archive to <b>C:/</b></p>
+			<p>Then go to <b>C:/Apache24/bin</b> and click on <b>httpd</b> to start the server.</p>
+			<br><p>The document root for Apache is now C:/Apache24/htdocs.</p>
+			<p>Copy the website.zip file to this location and extract the contents</p>
+			<p>To check the installation, open your browser window and go to <a href="http://localhost/site1/index.html">http://localhost/site1/index.html</a>.</p>
+			
+						
+		
+		</div><!--close content_item-->
+	</div><!--close content-->   
+</div><!--close site_content-->  	
+ 
+ 
+ 
+ <!-- FOOTER CONTENT -->	
+
+    <footer>
+	  website template by <a href="http://www.freehtml5templates.co.uk"  target="_blank">Free HTML5 Templates</a>
+    </footer>
+
+  </div><!--close main-->
+
+
+
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/image_slide.js"></script>	
+  
+</body>
+</html>

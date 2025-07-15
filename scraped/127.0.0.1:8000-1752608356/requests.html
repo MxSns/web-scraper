@@ -1,0 +1,207 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+  <title>Sample ECTEG Site</title>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+
+
+<body>
+  <div id="main">		
+
+<!-- HEADING -->	
+    <header>
+	  <div id="strapline">
+	    <div id="welcome_slogan">
+	      <h1>Welcome To The Sample ECTEG Site!</h1>
+	    </div><!--close welcome_slogan-->
+      </div><!--close strapline-->	  
+	  
+
+<!-- LINKS MENU -->	
+	  <nav>
+	    <div id="menubar">
+          <ul id="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="install.html">Website Installation</a></li>
+            <li class="current"><a href="requests.html">Python &amp; Requests</a></li>
+            <li><a href=suspect.html>Suspect Page</a></li>
+          </ul>
+        </div><!--close menubar-->	
+      </nav>
+    </header>
+
+
+
+<!-- SLIDESHOW IMAGES -->	
+   
+    <div id="slideshow_container">  
+	  <div class="slideshow">
+	    <ul class="slideshow">
+          <li class="show"><img width="940" height="250" src="images/ecteg.png" alt="&quot;European Cybercrime Training and Education Group&quot;" /></li>
+          <li><img width="940" height="290" src="images/python.jpg" alt="&quot;Python for Investigators&quot;" /></li>
+        </ul> 
+	  </div><!--close slideshow-->  	
+	</div><!--close slideshow_container-->   
+	
+	
+	
+<!-- MAIN CONTENT -->	
+	
+	<div id="site_content">		
+		  
+		  
+<!-- SIDEBAR CONTENT -->	
+	  <div class="sidebar_container">       
+		   		
+		<div class="sidebar">
+          <div class="sidebar_item">
+            <h2><b>Latest Updates</b></h2>
+            <h3>July 2015</h3>
+            <p>Invites sent out to potential ECTEG participants from accross European Union Member states and candidate countries.</p>
+		  </div>
+        </div>
+		
+		<div class="sidebar">
+          <div class="sidebar_item">
+            <h3>August 2015</h3>
+            <p>Developers frantically preparing pre-read material for chosen participants.</p>         
+		  </div><!--close sidebar_item--> 
+        </div><!--close sidebar-->
+        
+        <div class="sidebar">
+          <div class="sidebar_item">
+            <h3>October 2015</h3>
+            <p>Pilot participants have arrived on the courses. The latest batch of ECTEG trained LE Officers are about to be released back into the wild!</p>         
+		  </div><!--close sidebar_item--> 
+        </div><!--close sidebar-->  		  		
+        
+        <div class="sidebar">
+          <div class="sidebar_item">
+            <h2><b>Contact</b></h2>
+            <p>Phone: +353-1-123-4567</p>
+            <p>Email: <a href="mailto:noreply@ecteg.eu">noreply@ecteg.eu</a></p>
+          </div><!--close sidebar_item--> 
+        </div><!--close sidebar-->
+       </div><!--close sidebar_container-->	
+
+	
+
+<!-- MAIN BODY CONTENT -->	
+	<div id="content">
+		<div class="content_item">
+			<h2 id="top">Requests<img src="images/requests.png" alt="Requests" style="float:right;width:200px;"></h2>
+			<p><i>This content has been extracted from the <a   href=http://www.python-requests.org/en/latest/  target="_blank">Requests</a> website.</i>
+			<br>
+			
+			<p>Most existing Python modules for sending HTTP requests are extremely verbose and cumbersome. Things shouldnt be this way. Not in Python.</p>
+			<p>While Pythons standard urllib2 module provides most of the HTTP capabilities you need, the API is thoroughly broken. It was built for a different time  and a different web. 
+			It requires an enormous amount of work (even method overrides) to perform the simplest of tasks.</p>
+			<br>
+			
+			<p>Luckily, <i>Requests</i> is an Apache2 Licensed HTTP library, written in Python, for human beings.</p>
+			<p>Requests takes all of the work out of Python HTTP/1.1  making your integration with web services seamless. 
+			Theres no need to manually add query strings to your URLs, or to form-encode your POST data. Keep-alive and HTTP connection pooling are 100% automatic, powered by urllib3, which is embedded within Requests.</p>
+			<br>
+			
+			<h2>Using the Requests Module</h2>
+			<p>Since we are using a module, the first thing to do is import it:</p>
+			<p><code>import requests</code></p>
+			<br>
+			
+			<h2>Making a Request</h2>
+			<p>Making a request is quite easy. Let's request the ECTEG website:</p>
+			<p><code>r = requests.get( "http://www.ecteg.eu" )</code></p>
+			<p>This creates a <b>Response</b> object called <b>r</b>.The Response object contains a lot of useful information. For example:</p>
+			<ul>
+				<li>Response URL Information</li>
+				<li>Response Content</li>
+				<li>Response Encoding Information</li>
+				<li>Response Status Codes</li>
+				<li>Response Headers</li>
+			</ul>
+			<p>Requests simple API means that all forms of HTTP request are as obvious. Other requests such as POST, PUT, DELETE, HEAD and OPTIONS are all done in a similar manner to GET.
+			</p>
+			<p align="right"><a href="#top">top of page</a><p>
+			<br>
+
+			<h2>Response URL Information</h2>
+			<p>This can be useful if you are managing a lot of response objects. The following command will print the URL of the request.</p>
+			<p><code>print ( r.url )</code></p>
+			<br>
+			
+			<h2>Response Content</h2>
+			<p>This is one of the most useful items retrieved by a request. It is the actual content of a web page at a given URL.
+			The following command can be used to print a web page:</p>
+			<p><code>print ( r.text )</code></p>
+			<p>Requests will automatically decode content from the server.</p>
+			<br>
+
+			<h2>Response Encoding Information</h2>
+			<p>The text encoding guessed by Requests is used when you access the response content. To get the encoding used, or to set your own encoding, use the following commands:</p>
+			<p>To <i>get</i> the encoding: <code>print ( r.encoding )</code></p>
+			<p>To <i>set</i> the encoding: <code>r.encoding = 'utf-8'</code></p>
+			<br>
+			
+			<h2>Response Status Codes</h2>
+			<p>You can also check a response's status code to determine if a request succeeded, if there was content returned, if redirection was needed, etc.</p>
+			<p>A full list of status codes are described <a  href=http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html  target="_blank">here</a>.</p>
+			<p>The following command can be used to view the status code of a response:</p>
+			<p><code>print ( r.status_code )</code></p>
+			<p>Requests also comes with a built-in status code lookup object for easy reference. For example to determine if a request was successful (status code = 200), the following will print True or False:</p>
+			<p><code>print ( r.status_code == requests.codes.ok )</code></p>
+			<p align="right"><a href="#top">top of page</a><p>
+			<br>
+			
+			<h2>Response Headers</h2>
+			<p>A server's response headers are returned as a case insensitive Python dictionary. The following command can be used to view this dictionary:</p>
+			<p><code>print ( r.headers )</code></p>
+			<p>This will return something like the following:<code><pre><b>
+{
+	'content-length': '2018', 
+	'content-encoding': 'gzip', 
+	'accept-ranges': 'bytes', 
+	'vary': 'Accept-Encoding', 
+	'server': 'Apache/2.4.7 (Ubuntu)', 
+	'last-modified': 'Thu, 06 Aug 2015 16:16:10 GMT', 
+	'etag': '"158b-51ca6d65d2909-gzip"', 
+	'date': 'Fri, 07 Aug 2015 11:16:00 GMT', 
+	'content-type': 'text/html'
+}
+			</b></pre></code></p>
+			<p>These "key:values" combinations can be accessed like a normal dictionary. For example, the following will print the server information (note that case doesn't matter):</p>
+			<p><code>print ( r.headers['SERVER'] )</code></p>
+			<br>
+			
+			<h2>More Information</h2>
+			<p>This page has only scratched the surface of the Requests module. Visit <a  href=http://www.python-requests.org/en/latest/user/quickstart/  target="_blank">here</a> for more information.</p>
+			<p>If you are using the requests module to monitor for changes on this website, you may wish to alter content on <a href=suspect.html#about  target="_blank">this</a> page.</p>
+			<p align="right"><a href="#top">top of page</a><p>
+	    </div><!--close content_item-->
+      </div><!--close content-->   
+	</div><!--close site_content-->  	
+ 
+ 
+ 
+ <!-- FOOTER CONTENT -->	
+
+    <footer>
+	  website template by <a href = "http://www.freehtml5templates.co.uk"  target="_blank">Free HTML5 Templates</a>
+    </footer>
+
+  </div><!--close main-->
+
+
+
+  
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/image_slide.js"></script>
+  
+</body>
+</html>
